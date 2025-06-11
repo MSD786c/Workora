@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
@@ -30,12 +31,12 @@ export default function Home() {
         <p className="text-lg sm:text-xl text-gray-700 max-w-2xl">
           Delivering manpower solutions across construction, hospitality, events, and more — with reliability and speed across the UAE.
         </p>
-        <a
+        <Link
           href="/contact"
           className="mt-8 inline-block bg-[#d4af62] text-white px-6 py-3 rounded shadow hover:bg-[#c19c4f] transition"
         >
           Get in Touch
-        </a>
+        </Link>
       </section>
 
       {/* Preview of Services */}

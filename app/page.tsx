@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
+import Image from "next/image"; // make sure this is at the top
 
 export default function Home() {
   const previewServices = [
@@ -19,24 +20,41 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-white text-black">
+    <main className="bg-white text-black relative">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-20 bg-[#f7f7f7]">
-        <h1 className="text-4xl sm:text-5xl font-bold text-[#d4af62] mb-4">
-          Workora – Your Trusted Labor Supply Partner
-        </h1>
-        <p className="text-lg sm:text-xl text-gray-700 max-w-2xl">
-          Delivering manpower solutions across construction, hospitality, events, and more — with reliability and speed across the UAE.
-        </p>
-        <a
-          href="/contact"
-          className="mt-8 inline-block bg-[#d4af62] text-white px-6 py-3 rounded shadow hover:bg-[#c19c4f] transition"
-        >
-          Get in Touch
-        </a>
-      </section>
+
+    <section className="relative w-full h-screen overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/hero.jpg"
+          alt="Hero Background"
+          fill
+          priority
+          className="object-cover z-0"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+        {/* Content */}
+        <div className="relative z-20 flex flex-col items-center justify-center text-center h-full px-4 text-white max-w-3xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            Professional Manpower Solutions for Every Industry
+          </h1>
+          <p className="text-lg sm:text-xl mb-6">
+            Workora delivers vetted manpower to drive your success — across construction, hospitality, logistics, and more.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-[#d4af62] text-black font-semibold px-6 py-3 rounded hover:bg-[#c49b3e] transition"
+          >
+            Get a Quote
+          </a>
+        </div>
+      </section> 
+
+
 
       {/* Preview of Services */}
       <section className="py-20 px-4 text-center">

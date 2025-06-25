@@ -8,9 +8,6 @@ import ContactForm from "../../components/ContactForm";
 import HeroBanner from "../../components/HeroBanner";
 import SectionTitle from "../../components/SectionTitle";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
-import { metadata } from "./metadata";
-
-export { metadata };
 
 export default function Contact() {
   const contactInfo = [

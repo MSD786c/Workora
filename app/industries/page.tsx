@@ -20,9 +20,6 @@ import CallToAction from "../../components/CallToAction";
 import SectorCard from "../../components/SectorCard";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 import { motion } from 'framer-motion';
-import { metadata } from "./metadata";
-
-export { metadata };
 
 export default function Industries() {
   // Industry cards data

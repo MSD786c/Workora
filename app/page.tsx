@@ -24,9 +24,6 @@ import Stats from "../components/Stats";
 import Testimonials from "../components/Testimonials";
 import FeaturedSection from "../components/FeaturedSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import { metadata } from "./metadata";
-
-export { metadata };
 
 export default function Home() {
   const previewServices = [

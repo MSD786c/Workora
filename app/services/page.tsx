@@ -18,9 +18,6 @@ import HeroBanner from "../../components/HeroBanner";
 import SectionTitle from "../../components/SectionTitle";
 import CallToAction from "../../components/CallToAction";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
-import { metadata } from "./metadata";
-
-export { metadata };
 
 export default function Services() {
   const services = [

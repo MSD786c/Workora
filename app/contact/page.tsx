@@ -60,7 +60,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
           <SectionTitle 
             title="Get in Touch" 
-            subtitle="Reach out to us with your inquiries. We're ready to assist you with your manpower needs."
+            subtitle="Reach out to us with your inquiries. We&apos;re ready to assist you with your manpower needs."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
@@ -119,7 +119,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Fill out the form below and our team will get back to you within 24 hours. We're here to answer any questions about our manpower services.
+                Fill out the form below and our team will get back to you within 24 hours. We&apos;re here to answer any questions about our manpower services.
               </motion.p>
               
               <ContactForm />
@@ -148,7 +148,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Visit our office in Dubai to discuss your manpower requirements in person. We're conveniently located and easily accessible.
+                Visit our office in Dubai to discuss your manpower requirements in person. We&apos;re conveniently located and easily accessible.
               </motion.p>
               
               <motion.div 

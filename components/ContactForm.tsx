@@ -85,7 +85,7 @@ const ContactForm = () => {
             <Send size={24} className="text-green-600" />
           </motion.div>
           <h3 className="text-2xl font-bold text-gray-800 mb-2">Thank You!</h3>
-          <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon.</p>
+          <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
         </motion.div>
       ) : (
         <motion.form 

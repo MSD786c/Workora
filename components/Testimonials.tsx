@@ -54,7 +54,7 @@ const Testimonials = ({ backgroundImage = '/images/home/testimonial-bg.jpg' }) =
     }
     
     return () => clearInterval(interval);
-  }, [autoplay]);
+  }, [autoplay, nextTestimonial]);
 
   return (
     <div 
@@ -98,7 +98,7 @@ const Testimonials = ({ backgroundImage = '/images/home/testimonial-bg.jpg' }) =
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
-                "{testimonials[current].quote}"
+                &ldquo;{testimonials[current].quote}&rdquo;
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

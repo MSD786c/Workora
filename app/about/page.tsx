@@ -78,7 +78,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Workora Manpower Supply L.L.C. is a leading provider of skilled and unskilled labor across the United Arab Emirates. Established with a vision to bridge the workforce gap in the region, we've grown to become a trusted partner for businesses across multiple industries.
+                Workora Manpower Supply L.L.C. is a leading provider of skilled and unskilled labor across the United Arab Emirates. Established with a vision to bridge the workforce gap in the region, we&apos;ve grown to become a trusted partner for businesses across multiple industries.
               </motion.p>
               <motion.p 
                 className="text-gray-700"
@@ -313,7 +313,7 @@ export default function About() {
             >
               <h3 className="text-2xl font-semibold text-[#d4af62] mb-6">Our Commitment</h3>
               <p className="text-gray-700 mb-6">
-                At Workora, we're committed to:
+                At Workora, we&apos;re committed to:
               </p>
               <ul className="space-y-4">
                 {[

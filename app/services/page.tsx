@@ -8,7 +8,6 @@ import {
   Truck, 
   Users, 
   Shield, 
-  Clock,
   CheckCircle
 } from 'lucide-react';
 import Navbar from "../../components/Navbar";

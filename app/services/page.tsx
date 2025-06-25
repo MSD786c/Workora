@@ -8,7 +8,8 @@ import {
   Truck, 
   Users, 
   Shield, 
-  CheckCircle
+  CheckCircle,
+  DollarSign
 } from 'lucide-react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -55,6 +56,12 @@ export default function Services() {
       description: "Trained guards for residential, commercial, and event security.",
       icon: <Shield size={24} />,
       imageUrl: "/images/services/security.jpg"
+    },
+    {
+      title: "Payroll Solutions",
+      description: "Comprehensive payroll management, tax compliance, and employee benefits administration.",
+      icon: <DollarSign size={24} />,
+      imageUrl: "/images/services/payroll.jpg"
     },
   ];
 

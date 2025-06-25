@@ -16,7 +16,6 @@ export default function Contact() {
       title: "Phone",
       details: [
         "+971 4 221 2833",
-        "+971 50 123 4567"
       ]
     },
     {
@@ -24,7 +23,6 @@ export default function Contact() {
       title: "Email",
       details: [
         "info@workora.ae",
-        "careers@workora.ae"
       ]
     },
     {
@@ -178,8 +176,8 @@ export default function Contact() {
                 viewport={{ once: true }}
               >
                 <h3 className="text-xl font-semibold mb-2">Office Hours</h3>
-                <p className="text-gray-600 mb-1">Sunday - Thursday: 9:00 AM - 6:00 PM</p>
-                <p className="text-gray-600">Friday - Saturday: Closed</p>
+                <p className="text-gray-600 mb-1">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                <p className="text-gray-600">Sunday: Closed</p>
               </motion.div>
             </motion.div>
           </div>

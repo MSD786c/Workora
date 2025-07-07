@@ -9,15 +9,12 @@ const Footer = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Industries', href: '/industries' },
     { name: 'Contact', href: '/contact' },
   ];
 
   const socialLinks = [
-    { icon: <Linkedin size={20} />, href: '#', label: 'LinkedIn' },
-    { icon: <Facebook size={20} />, href: '#', label: 'Facebook' },
-    { icon: <Instagram size={20} />, href: '#', label: 'Instagram' },
-    { icon: <Twitter size={20} />, href: '#', label: 'Twitter' },
+    { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/workora-manpower-supply/', label: 'LinkedIn' },
+
   ];
 
   const containerVariants = {
@@ -106,7 +103,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start">
               <MapPin size={18} className="text-[#d4af62] mt-1 mr-3 flex-shrink-0" />
-              <span className="text-gray-300">P.O. Box 62575, Dubai, UAE</span>
+              <span className="text-gray-300">Sultan Business Centre, Al Wasl Building, Oud Metha, Dubai, UAE</span>
             </li>
           </ul>
         </motion.div>

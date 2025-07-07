@@ -1,16 +1,1 @@
-{
-  "app": {
-    "[project]/app/about/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ],
-    "[project]/app/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ],
-    "[project]/app/services/page": [
-      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
-    ]
-  },
-  "appUsingSizeAdjust": true,
-  "pages": {},
-  "pagesUsingSizeAdjust": false
-}
+{"pages":{},"app":{"/Users/suhayl/Downloads/Web Dev/Workora/app/layout":["static/media/4f05ba3a6752a328-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}

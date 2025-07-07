@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 
 interface HeroBannerProps {
-  title: string;
+  title: string | React.ReactNode;
   backgroundImage: string;
 }
 

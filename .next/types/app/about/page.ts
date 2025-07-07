@@ -1,4 +1,4 @@
-// File: /Users/suhayl/Downloads/Workora/app/about/page.tsx
+// File: /Users/suhayl/Downloads/Web Dev/Workora/app/about/page.tsx
 import * as entry from '../../../../app/about/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

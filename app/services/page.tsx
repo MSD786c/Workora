@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { 
   HardHat, 
   Utensils, 
@@ -9,7 +10,18 @@ import {
   Users, 
   Shield, 
   CheckCircle,
-  DollarSign
+  DollarSign,
+  Building2,
+  Wrench,
+  Stethoscope,
+  Factory,
+  Ship,
+  Hotel,
+  Warehouse,
+  Briefcase,
+  Calculator,
+  FileText,
+  TrendingUp
 } from 'lucide-react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -20,49 +32,147 @@ import CallToAction from "../../components/CallToAction";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 
 export default function Services() {
-  const services = [
+  // Handle anchor navigation when page loads
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+      const sectionId = window.location.hash.substring(1) // Remove the #
+      const element = document.getElementById(sectionId)
+      if (element) {
+        // Add a delay to ensure the page has rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }, 500)
+      }
+    }
+  }, [])
+
+  const blueCollarServices = [
     {
-      title: "Construction Labor",
-      description: "Skilled and unskilled workers for site operations, masonry, carpentry, steel fixing, and more.",
+      title: "Construction & Civil",
+      description: "Skilled and unskilled workers for construction projects, including steel fixers, masons, carpenters, and general labor.",
       icon: <HardHat size={24} />,
-      imageUrl: "/images/services/construction.jpg"
+      imageUrl: "/images/services/construction.jpg",
+      skills: ["Masons and carpenters", "Steel fixers and fabricators", "Painters and plasterers", "General laborers", "Site supervisors"]
     },
     {
-      title: "Hospitality Staff",
-      description: "Waiters, housekeeping, receptionists, kitchen helpers, and hotel support staff.",
-      icon: <Utensils size={24} />,
-      imageUrl: "/images/services/hospitality.jpg"
+      title: "Oil & Gas",
+      description: "Specialized workforce for upstream, midstream, and downstream operations in the oil and gas industry.",
+      icon: <Building2 size={24} />,
+      imageUrl: "/images/industries/oil-gas.jpg",
+      skills: ["Rig workers and operators", "Pipeline technicians", "Refinery workers", "HSE specialists", "Maintenance technicians"]
+    },
+    {
+      title: "MEP Services",
+      description: "Specialized technicians for mechanical, electrical, and plumbing projects across residential and commercial sectors.",
+      icon: <Wrench size={24} />,
+      imageUrl: "/images/industries/mep.jpg",
+      skills: ["Electricians", "HVAC technicians", "Plumbers", "Fire system technicians", "BMS operators", "Ductman", "Insulator"]
     },
     {
       title: "Cleaning Services",
-      description: "Commercial, residential, and industrial cleaning manpower.",
+      description: "Commercial, residential, and industrial cleaning manpower for all types of facilities.",
       icon: <Sparkles size={24} />,
-      imageUrl: "/images/services/cleaning.jpg"
+      imageUrl: "/images/services/cleaning.jpg",
+      skills: ["Commercial cleaning", "Residential cleaning", "Industrial cleaning", "Specialized sanitization", "Maintenance cleaning"]
     },
     {
       title: "Logistics & Warehouse",
-      description: "Pickers, packers, forklift operators, and inventory staff.",
+      description: "Skilled personnel for warehouse operations, inventory management, and transportation services.",
       icon: <Truck size={24} />,
-      imageUrl: "/images/services/logistics.jpg"
-    },
-    {
-      title: "Event Crew",
-      description: "Setup crews, ushers, stewards, and temporary manpower for events.",
-      icon: <Users size={24} />,
-      imageUrl: "/images/services/events.jpg"
+      imageUrl: "/images/services/logistics.jpg",
+      skills: ["Warehouse workers", "Forklift operators", "Packers and loaders", "Inventory clerks", "Delivery drivers"]
     },
     {
       title: "Security Personnel",
-      description: "Trained guards for residential, commercial, and event security.",
+      description: "Trained guards for residential, commercial, and event security with proper certifications.",
       icon: <Shield size={24} />,
-      imageUrl: "/images/services/security.jpg"
+      imageUrl: "/images/services/security.jpg",
+      skills: ["Building security", "Event security", "Patrol services", "Access control", "Emergency response"]
     },
     {
-      title: "Payroll Solutions",
-      description: "Comprehensive payroll management, tax compliance, and employee benefits administration.",
-      icon: <DollarSign size={24} />,
-      imageUrl: "/images/services/payroll.jpg"
+      title: "Manufacturing & Engineering",
+      description: "Skilled workers for production lines, quality control, and engineering support across manufacturing sectors.",
+      icon: <Factory size={24} />,
+      imageUrl: "/images/industries/manufacturing.jpg",
+      skills: ["Production line workers", "Quality control inspectors", "Machine operators", "Assembly technicians", "Maintenance staff"]
     },
+    {
+      title: "Marine & Offshore",
+      description: "Specialized workforce for shipyards, ports, and offshore operations requiring maritime expertise.",
+      icon: <Ship size={24} />,
+      imageUrl: "/images/industries/marine.jpg",
+      skills: ["Ship maintenance crew", "Port workers", "Offshore technicians", "Marine engineers", "Dock workers"]
+    },
+    {
+      title: "Delivery Drivers",
+      description: "Professional drivers for last-mile delivery, logistics, and courier services across all vehicle types.",
+      icon: <Truck size={24} />,
+      imageUrl: "/images/services/delivery-drivers.jpg",
+      skills: ["Van and truck drivers", "Motorcycle couriers", "Bicycle delivery riders", "Package handlers", "Route optimization specialists", "Customer service representatives"]
+    }
+  ];
+
+  const whiteCollarServices = [
+    {
+      title: "Hospitality Staff",
+      description: "Professional staff for hotels, restaurants, and events, including waiters, housekeeping, and kitchen staff.",
+      icon: <Utensils size={24} />,
+      imageUrl: "/images/services/hospitality.jpg",
+      skills: ["Housekeeping staff", "Food & beverage servers", "Kitchen helpers", "Front desk personnel", "Event staff"]
+    },
+    {
+      title: "Event Management",
+      description: "Setup crews, ushers, stewards, and temporary manpower for corporate and social events.",
+      icon: <Users size={24} />,
+      imageUrl: "/images/services/events.jpg",
+      skills: ["Event coordinators", "Setup crews", "Ushers and stewards", "Audio-visual technicians", "Customer service staff"]
+    },
+    {
+      title: "Healthcare Support",
+      description: "Support staff for healthcare facilities, including orderlies, cleaners, and administrative personnel.",
+      icon: <Stethoscope size={24} />,
+      imageUrl: "/images/industries/healthcare.jpg",
+      skills: ["Administrative assistants", "Patient care assistants", "Medical records clerks", "Reception staff", "Support coordinators"]
+    },
+    {
+      title: "Facility Management",
+      description: "Comprehensive administrative and management solutions for building operations and maintenance coordination.",
+      icon: <Warehouse size={24} />,
+      imageUrl: "/images/industries/facility.jpg",
+      skills: ["Property administrators", "Maintenance coordinators", "Facility supervisors", "Vendor management", "Administrative support"]
+    }
+  ];
+
+  const payrollServices = [
+    {
+      title: "Complete Payroll Processing",
+      description: "End-to-end payroll management including salary calculations, statutory deductions, and timely disbursements through secure payment systems.",
+      icon: <Calculator size={24} />,
+      imageUrl: "/images/services/payroll.jpg",
+      features: ["Monthly salary processing", "Overtime & allowance calculations", "Statutory deduction management", "WPS salary transfers", "End of service benefit calculations", "Multi-currency payroll support"]
+    },
+    {
+      title: "Employee Administration",
+      description: "Comprehensive employee lifecycle management from onboarding to exit, handling all documentation and government compliance requirements.",
+      icon: <FileText size={24} />,
+      imageUrl: "/images/services/payroll.jpg",
+      features: ["Employee onboarding & documentation", "Visa & work permit processing", "Emirates ID coordination", "Medical insurance enrollment", "Bank account opening assistance", "Employee record maintenance"]
+    },
+    {
+      title: "Attendance & Time Management",
+      description: "Advanced time tracking and attendance management systems with automated timesheet processing and verification.",
+      icon: <TrendingUp size={24} />,
+      imageUrl: "/images/services/payroll.jpg",
+      features: ["Biometric attendance systems", "Timesheet collection & verification", "Leave management integration", "Overtime tracking", "Shift schedule management", "Real-time attendance reporting"]
+    },
+    {
+      title: "Regulatory Compliance",
+      description: "Ensuring complete adherence to UAE labor laws, MOHRE regulations, and government requirements with expert guidance.",
+      icon: <Briefcase size={24} />,
+      imageUrl: "/images/services/payroll.jpg",
+      features: ["UAE labor law compliance", "MOHRE liaison services", "Government audit support", "Legal documentation", "Policy implementation", "Regulatory updates management"]
+    }
   ];
 
   const serviceProcess = [
@@ -88,6 +198,15 @@ export default function Services() {
     }
   ];
 
+  const benefits = [
+    "Reduced administrative burden and HR costs",
+    "Flexible workforce scaling based on project demands",
+    "Access to pre-screened, qualified workers",
+    "Minimized legal and compliance risks",
+    "Quick replacement of workers when needed",
+    "Consistent quality and performance standards"
+  ];
+
   return (
     <main className="bg-white text-black">
       <Navbar />
@@ -98,31 +217,268 @@ export default function Services() {
         backgroundImage="/images/services/hero.jpg" 
       />
 
-      {/* Services Section */}
-      <section className="py-20 px-4 bg-[#f7f7f7]">
+      {/* Blue Collar Services */}
+      <section id="blue-collar" className="py-20 px-4 bg-[#f7f7f7]">
         <div className="max-w-7xl mx-auto">
           <SectionTitle 
-            title="Manpower Solutions" 
-            subtitle="Workora provides skilled and semi-skilled manpower for key sectors across the UAE."
+            title="Blue Collar Services" 
+            subtitle="Skilled and semi-skilled workforce solutions for hands-on operations across various industries."
           />
 
           <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            {services.map((service, index) => (
-              <ServiceCard
+            {blueCollarServices.map((service, index) => (
+              <motion.div 
                 key={index}
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                imageUrl={service.imageUrl}
-                index={index}
-              />
+                className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  y: -5,
+                  transition: { duration: 0.2 }
+                }}
+              >
+                {service.imageUrl && (
+                  <div className="h-48 overflow-hidden">
+                    <motion.img 
+                      src={service.imageUrl} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover" 
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                )}
+                <div className="px-7 py-6">
+                  <div className="flex items-center mb-3">
+                    <div className="text-[#d4af62] mr-3">{service.icon}</div>
+                    <h3 className="text-lg font-semibold text-[#d4af62]">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4 text-sm">{service.description}</p>
+                  {service.skills && (
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-medium text-gray-800">Key Skills:</h4>
+                      <ul className="space-y-1">
+                        {service.skills.map((skill, i) => (
+                          <li key={i} className="flex items-center text-xs text-gray-600">
+                            <CheckCircle className="text-[#d4af62] mr-1 flex-shrink-0" size={12} />
+                            <span>{skill}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* White Collar Services */}
+      <section id="white-collar" className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <SectionTitle 
+            title="White Collar Services" 
+            subtitle="Professional and administrative staff for customer-facing and office-based operations."
+          />
+
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            {whiteCollarServices.map((service, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  y: -5,
+                  transition: { duration: 0.2 }
+                }}
+              >
+                {service.imageUrl && (
+                  <div className="h-48 overflow-hidden">
+                    <motion.img 
+                      src={service.imageUrl} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover" 
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                )}
+                <div className="px-7 py-6">
+                  <div className="flex items-center mb-3">
+                    <div className="text-[#d4af62] mr-3">{service.icon}</div>
+                    <h3 className="text-lg font-semibold text-[#d4af62]">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-700 mb-4 text-sm">{service.description}</p>
+                  {service.skills && (
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-medium text-gray-800">Key Skills:</h4>
+                      <ul className="space-y-1">
+                        {service.skills.map((skill, i) => (
+                          <li key={i} className="flex items-center text-xs text-gray-600">
+                            <CheckCircle className="text-[#d4af62] mr-1 flex-shrink-0" size={12} />
+                            <span>{skill}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Payroll Management Services */}
+      <section id="payroll-management" className="py-20 px-4 bg-[#f7f7f7]">
+        <div className="max-w-7xl mx-auto">
+          <SectionTitle 
+            title="Payroll Management Solutions" 
+            subtitle="Comprehensive payroll and HR services that let you focus on what matters most - growing your business."
+          />
+
+          {/* Payroll Description */}
+          <motion.div 
+            className="max-w-3xl mx-auto mb-16 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                Payroll is the backbone of every organization. With ever-changing regulations and complex compliance requirements, managing payroll in-house can be overwhelming and costly.
+              </p>
+              <p className="text-[#d4af62] font-semibold text-lg">
+                Workora simplifies your payroll operations while ensuring 100% compliance, allowing your team to focus on strategic growth.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            {payrollServices.map((service, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-[#d4af62]/30"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  y: -5,
+                  transition: { duration: 0.2 }
+                }}
+              >
+                <div className="px-7 py-6">
+                  <div className="flex items-center mb-4">
+                    <div className="text-[#d4af62] mr-3 bg-[#d4af62]/10 p-2 rounded-lg">{service.icon}</div>
+                    <h3 className="text-lg font-bold text-[#d4af62]">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+                  {service.features && (
+                    <div className="space-y-3">
+                      <h4 className="text-sm font-semibold text-gray-800 border-b border-gray-200 pb-2">Key Features</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, i) => (
+                          <li key={i} className="flex items-start text-xs text-gray-600">
+                            <CheckCircle className="text-[#d4af62] mt-0.5 mr-2 flex-shrink-0" size={12} />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Payroll Benefits Section */}
+          <motion.div 
+            className="mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-gradient-to-r from-[#d4af62]/5 to-[#d4af62]/10 p-8 rounded-xl border border-[#d4af62]/20">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-[#d4af62] mb-3">Why Choose Workora Payroll Management Solutions?</h3>
+                <p className="text-gray-700 max-w-2xl mx-auto">
+                  Join hundreds of businesses who trust us with their payroll operations and focus on what they do best.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
+                    <DollarSign className="text-[#d4af62] mx-auto mb-2" size={32} />
+                    <h4 className="font-semibold text-gray-800">Cost Effective</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Save up to 60% on payroll costs</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
+                    <Shield className="text-[#d4af62] mx-auto mb-2" size={32} />
+                    <h4 className="font-semibold text-gray-800">100% Secure</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Bank-level security & encryption</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
+                    <CheckCircle className="text-[#d4af62] mx-auto mb-2" size={32} />
+                    <h4 className="font-semibold text-gray-800">Fully Compliant</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">UAE labor law & MOHRE certified</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
+                    <TrendingUp className="text-[#d4af62] mx-auto mb-2" size={32} />
+                    <h4 className="font-semibold text-gray-800">Expert Support</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Dedicated account managers</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -150,7 +506,7 @@ export default function Services() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  {/* Step Number - Left Side on Even, Right Side on Odd */}
+                  {/* Step Number */}
                   <div className="md:w-1/2 flex justify-center md:justify-end">
                     <motion.div 
                       className="relative"
@@ -166,7 +522,7 @@ export default function Services() {
                     </motion.div>
                   </div>
                   
-                  {/* Content - Right Side on Even, Left Side on Odd */}
+                  {/* Content */}
                   <div className="md:w-1/2">
                     <motion.div 
                       className="bg-white p-6 rounded-lg shadow-md"
@@ -213,14 +569,7 @@ export default function Services() {
               </motion.p>
               
               <ul className="space-y-4">
-                {[
-                  "Reduced administrative burden and HR costs",
-                  "Flexible workforce scaling based on project demands",
-                  "Access to pre-screened, qualified workers",
-                  "Minimized legal and compliance risks",
-                  "Quick replacement of workers when needed",
-                  "Consistent quality and performance standards"
-                ].map((item, index) => (
+                {benefits.map((item, index) => (
                   <motion.li 
                     key={index}
                     className="flex items-start"

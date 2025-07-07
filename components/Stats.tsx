@@ -1,64 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, Building, Clock, Award } from 'lucide-react';
-
-interface StatItemProps {
-  icon: React.ReactNode;
-  value: string;
-  label: string;
-  delay: number;
-}
-
-const StatItem = ({ icon, value, label, delay }: StatItemProps) => (
-  <motion.div 
-    className="flex flex-col items-center"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, delay }}
-    viewport={{ once: true }}
-  >
-    <motion.div 
-      className="text-[#d4af62] mb-3"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      transition={{ type: 'spring', stiffness: 200, delay: delay + 0.2 }}
-      viewport={{ once: true }}
-    >
-      {icon}
-    </motion.div>
-    <motion.h3 
-      className="text-3xl md:text-4xl font-bold text-white mb-1"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: delay + 0.3 }}
-      viewport={{ once: true }}
-    >
-      {value}
-    </motion.h3>
-    <motion.p 
-      className="text-gray-300 text-sm md:text-base"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: delay + 0.4 }}
-      viewport={{ once: true }}
-    >
-      {label}
-    </motion.p>
-  </motion.div>
-);
+import Marquee from 'react-fast-marquee';
 
 const Stats = ({ backgroundImage = '/images/home/stats-bg.jpg' }) => {
-  const stats = [
-    { icon: <Users size={36} />, value: '500+', label: 'Workers Deployed', delay: 0 },
-    { icon: <Building size={36} />, value: '100+', label: 'Client Companies', delay: 0.1 },
-    { icon: <Clock size={36} />, value: '10+', label: 'Years Experience', delay: 0.2 },
-    { icon: <Award size={36} />, value: '95%', label: 'Client Retention', delay: 0.3 },
+  const slogans = [
+    "Manpower that Moves Nations",
+    "Precision People for Every Project", 
+    "Where Industry Meets Human Power"
   ];
 
   return (
     <div 
-      className="relative py-16 md:py-24"
+      className="relative py-16 md:py-20 overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -66,24 +20,47 @@ const Stats = ({ backgroundImage = '/images/home/stats-bg.jpg' }) => {
         backgroundAttachment: 'fixed',
       }}
     >
-      <div className="absolute inset-0 bg-black/70" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/70" />
+      
+      <div className="relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-4"
+        >
+          <Marquee
+            gradient={false}
+            speed={40}
+            direction="right"
+            pauseOnHover={true}
+            className="py-4"
+          >
+            {slogans.map((slogan, index) => (
+              <div key={index} className="mx-12 whitespace-nowrap">
+                <span className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                  {slogan}
+                </span>
+                <span className="text-lg md:text-xl lg:text-2xl font-bold text-[#d4af62] mx-6">
+                  ◆
+                </span>
+              </div>
+            ))}
+          </Marquee>
+        </motion.div>
+
+        {/* Centered call-to-action text */}
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          className="text-center mt-8 px-4"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          {stats.map((stat, index) => (
-            <StatItem 
-              key={index} 
-              icon={stat.icon} 
-              value={stat.value} 
-              label={stat.label} 
-              delay={stat.delay} 
-            />
-          ))}
+          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            Connecting skilled professionals with opportunities that drive success across every industry
+          </p>
         </motion.div>
       </div>
     </div>

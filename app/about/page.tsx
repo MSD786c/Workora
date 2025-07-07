@@ -78,8 +78,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Workora Manpower Supply L.L.C. is a leading provider of skilled and unskilled labor across the United Arab Emirates. Established with a vision to bridge the workforce gap in the region, we&apos;ve grown to become a trusted partner for businesses across multiple industries.
-              </motion.p>
+              At Workora Manpower Supply, we specialize in delivering agile and efficient manpower solutions tailored to the dynamic demands of the construction, manufacturing, and logistics industries. With our deep pool of skilled professionals including electricians, plumbers, duct installers, carpenters, and construction helpers-were equipped to mobilize workforce support at a moment's notice.               </motion.p>
               <motion.p 
                 className="text-gray-700"
                 initial={{ opacity: 0 }}
@@ -87,8 +86,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                From construction sites to hotel lobbies, we deliver reliable manpower where and when you need it. Our commitment to quality, compliance, and customer satisfaction has earned us a reputation as one of the most dependable manpower suppliers in the UAE.
-              </motion.p>
+              Our commitment to reliability, compliance, and workforce readiness positions us as a trusted partner for businesses seeking to boost productivity and meet tight deadlines without the long-term costs of permanent staffing.              </motion.p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}

@@ -29,7 +29,9 @@ export default function Contact() {
       icon: <MapPin size={24} />,
       title: "Address",
       details: [
-        "P.O. Box 62575,",
+        "Sultan Business Centre",
+        "Al Wasl Building, Office 511",
+        "Oud Metha Road, Oud Metha",
         "Dubai, United Arab Emirates"
       ]
     },
@@ -146,7 +148,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Visit our office in Dubai to discuss your manpower requirements in person. We&apos;re conveniently located and easily accessible.
+                Visit our office in Dubai to discuss your manpower requirements in person. We&apos;re conveniently located at Sultan Business Centre, Al Wasl Building in Oud Metha.
               </motion.p>
               
               <motion.div 
@@ -157,7 +159,7 @@ export default function Contact() {
                 viewport={{ once: true }}
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.9719759966857!2d55.2702937!3d25.2052858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sBurj%20Khalifa!5e0!3m2!1sen!2sae!4v1651234567890!5m2!1sen!2sae"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.6455833249743!2d55.30611531544294!3d25.233556184037034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f42cc28ba49af%3A0x57bbd7cd1311987e!2sSultan%20Business%20Centre%2C%20Al%20Wasl%20Building%20-%20Oud%20Metha%20Rd%20-%20Oud%20Metha%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1704123456789!5m2!1sen!2sae"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: '400px' }}

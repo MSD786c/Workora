@@ -4,7 +4,7 @@
     "env": {},
     "webpack": null,
     "eslint": {
-      "ignoreDuringBuilds": false
+      "ignoreDuringBuilds": true
     },
     "typescript": {
       "ignoreBuildErrors": false,
@@ -14,7 +14,7 @@
     "cleanDistDir": true,
     "assetPrefix": "",
     "cacheMaxMemorySize": 52428800,
-    "configOrigin": "next.config.ts",
+    "configOrigin": "next.config.js",
     "useFileSystemPublicRoutes": true,
     "generateEtags": true,
     "pageExtensions": [
@@ -96,7 +96,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/Users/suhayl/Downloads/Workora",
+    "outputFileTracingRoot": "/Users/suhayl/Downloads/Web Dev/Workora",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -277,12 +277,12 @@
     },
     "htmlLimitedBots": "Mediapartners-Google|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti",
     "bundlePagesRouterDependencies": false,
-    "configFileName": "next.config.ts",
+    "configFileName": "next.config.js",
     "turbopack": {
-      "root": "/Users/suhayl/Downloads/Workora"
+      "root": "/Users/suhayl/Downloads/Web Dev/Workora"
     }
   },
-  "appDir": "/Users/suhayl/Downloads/Workora",
+  "appDir": "/Users/suhayl/Downloads/Web Dev/Workora",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: 'Workora | Professional Manpower Supply Solutions',
   description: 'Workora provides skilled and unskilled labor across the UAE for construction, hospitality, logistics, and more. Your trusted manpower partner.',
   keywords: 'manpower supply, UAE, construction labor, hospitality staff, logistics workers, cleaning services, skilled labor, unskilled labor',

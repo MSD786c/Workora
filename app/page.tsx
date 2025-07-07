@@ -62,11 +62,16 @@ export default function Home() {
 
       {/* Hero Banner */}
       <HeroBanner 
-        title="Professional Manpower Solutions for Every Industry" 
+        title={
+          <>
+            Empowering Industries Through Reliable{' '}
+            <span className="text-[#d4af62]">Manpower</span>
+          </>
+        }
         backgroundImage="/images/home/hero.jpg" 
       />
 
-      {/* Stats Section */}
+      {/* Mission Statement Section */}
       <Stats />
 
       {/* Featured Section */}

@@ -3,11 +3,12 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +26,14 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Our Expertise', href: '/industries' },
+    { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Contact', href: '/contact' },
+  ]
+
+  const servicesDropdown = [
+    { name: 'Blue Collar', href: '/services#blue-collar' },
+    { name: 'White Collar', href: '/services#white-collar' },
+    { name: 'Payroll Management', href: '/services#payroll-management' },
   ]
 
   return (
@@ -56,18 +62,57 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <motion.div
               key={link.name}
+              className="relative"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 + 0.2 }}
+              onMouseEnter={() => link.hasDropdown && setIsServicesDropdownOpen(true)}
+              onMouseLeave={() => link.hasDropdown && setIsServicesDropdownOpen(false)}
             >
-              <Link 
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#d4af62] ${
-                  isScrolled ? 'text-black' : 'text-white'
-                }`}
-              >
-                {link.name}
-              </Link>
+              {link.hasDropdown ? (
+                <div className="relative">
+                  <button
+                    className={`flex items-center text-sm font-medium transition-colors hover:text-[#d4af62] ${
+                      isScrolled ? 'text-black' : 'text-white'
+                    }`}
+                  >
+                    {link.name}
+                    <ChevronDown size={16} className="ml-1" />
+                  </button>
+                  
+                  <AnimatePresence>
+                    {isServicesDropdownOpen && (
+                      <motion.div
+                        className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-100"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {servicesDropdown.map((item, i) => (
+                          <Link
+                            key={i}
+                            href={item.href}
+                            onClick={() => setIsServicesDropdownOpen(false)}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#d4af62] transition-colors first:rounded-t-lg last:rounded-b-lg"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <Link 
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-[#d4af62] ${
+                    isScrolled ? 'text-black' : 'text-white'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
@@ -105,13 +150,37 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link 
-                    href={link.href}
-                    className="block text-black hover:text-[#d4af62] font-medium py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
+                  {link.hasDropdown ? (
+                    <div>
+                      <Link 
+                        href={link.href}
+                        className="block text-black hover:text-[#d4af62] font-medium py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                      <div className="pl-4 space-y-2">
+                        {servicesDropdown.map((item, i) => (
+                          <Link
+                            key={i}
+                            href={item.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="block text-gray-600 hover:text-[#d4af62] py-1 text-sm"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link 
+                      href={link.href}
+                      className="block text-black hover:text-[#d4af62] font-medium py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
             </div>

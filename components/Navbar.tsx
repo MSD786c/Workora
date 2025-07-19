@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
@@ -39,7 +40,7 @@ const Navbar = () => {
   return (
     <motion.nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -48,13 +49,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <motion.span 
-            className={`font-bold text-xl ${isScrolled ? 'text-[#d4af62]' : 'text-white'}`}
+          <motion.div 
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            Workora
-          </motion.span>
+            <Image
+              src="/workora-logo.png"
+              alt="Workora Logo"
+              width={180}
+              height={80}
+              className="h-18 w-auto md:h-20"
+              priority
+            />
+          </motion.div>
         </Link>
 
         {/* Desktop Navigation */}

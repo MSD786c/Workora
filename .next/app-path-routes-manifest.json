@@ -1,9 +1,9 @@
 {
+  "/api/contact/route": "/api/contact",
   "/_not-found/page": "/_not-found",
-  "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
+  "/services/page": "/services",
   "/contact/page": "/contact",
-  "/industries/page": "/industries",
   "/about/page": "/about",
-  "/services/page": "/services"
+  "/industries/page": "/industries"
 }

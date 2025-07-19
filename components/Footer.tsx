@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram, Twitter } from 'lucide-react';
 
@@ -35,6 +36,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#222] text-white py-16 px-4">
+      
       <motion.div 
         className="max-w-7xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-4"
         variants={containerVariants}
@@ -44,11 +46,17 @@ const Footer = () => {
       >
         {/* Company Info */}
         <motion.div variants={itemVariants}>
-          <h3 className="text-2xl font-bold text-[#d4af62] mb-6">
+          <div className="mb-6">
             <Link href="/" className="hover:text-white transition-colors">
-              Workora
+              <Image
+                src="/workora-logo.png"
+                alt="Workora Logo"
+                width={180}
+                height={60}
+                className="h-26 w-auto md:h-34"
+              />
             </Link>
-          </h3>
+          </div>
           <p className="text-gray-300 mb-6">
             Manpower Supply L.L.C. S.O.C – Providing skilled & unskilled labor across the UAE.
           </p>
@@ -128,9 +136,10 @@ const Footer = () => {
             </motion.button>
           </form>
         </motion.div>
+        
       </motion.div>
-
-      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+      
+      <div className="max-w-7xl mx-auto pt-4 border-t border-gray-800 text-center text-gray-400 text-sm">
         &copy; {new Date().getFullYear()} Workora Manpower Supply L.L.C. All rights reserved.
       </div>
     </footer>

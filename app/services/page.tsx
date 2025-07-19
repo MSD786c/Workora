@@ -47,6 +47,7 @@ export default function Services() {
     }
   }, [])
 
+  // Blue Collar = physical/manual/field/technical/operational roles
   const blueCollarServices = [
     {
       title: "Construction & Civil",
@@ -59,7 +60,7 @@ export default function Services() {
       title: "Oil & Gas",
       description: "Specialized workforce for upstream, midstream, and downstream operations in the oil and gas industry.",
       icon: <Building2 size={24} />,
-      imageUrl: "/images/industries/oil-gas.jpg",
+      imageUrl: "/images/industries/oil-and-gas.jpg",
       skills: ["Rig workers and operators", "Pipeline technicians", "Refinery workers", "HSE specialists", "Maintenance technicians"]
     },
     {
@@ -108,39 +109,94 @@ export default function Services() {
       title: "Delivery Drivers",
       description: "Professional drivers for last-mile delivery, logistics, and courier services across all vehicle types.",
       icon: <Truck size={24} />,
-      imageUrl: "/images/services/delivery-drivers.jpg",
+      imageUrl: "/images/services/delivery-driver.jpg",
       skills: ["Van and truck drivers", "Motorcycle couriers", "Bicycle delivery riders", "Package handlers", "Route optimization specialists", "Customer service representatives"]
+    },
+    // --- MOVED FROM WHITE COLLAR ---
+    {
+      title: "Hospitality & Events Support",
+      description: "Hands-on staff for hotels, restaurants, catering, and event setup including waiters, housekeepers, kitchen helpers, and event setup crews.",
+      icon: <Utensils size={24} />,
+      imageUrl: "/images/industries/events.jpg",
+      skills: [
+        "Housekeeping staff", 
+        "Food & beverage servers", 
+        "Kitchen helpers", 
+        "Event setup crews", 
+        "Ushers and stewards"
+      ]
+    },
+    {
+      title: "Healthcare Assistants",
+      description: "Non-clinical support staff for hospitals and clinics, including patient care assistants, orderlies, and cleaners.",
+      icon: <Stethoscope size={24} />,
+      imageUrl: "/images/industries/healthcare.jpg",
+      skills: [
+        "Patient care assistants", 
+        "Orderlies", 
+        "Cleaners"
+      ]
+    },
+    {
+      title: "Facility & Maintenance Staff",
+      description: "Technicians and support workers for property upkeep, cleaning, and maintenance operations.",
+      icon: <Warehouse size={24} />,
+      imageUrl: "/images/industries/facility.jpg",
+      skills: [
+        "Cleaning and janitorial staff", 
+        "Maintenance technicians", 
+        "Facility support"
+      ]
     }
   ];
 
+  // White Collar = admin, coordinator, supervisor, professional, office/customer-facing
   const whiteCollarServices = [
     {
-      title: "Hospitality Staff",
-      description: "Professional staff for hotels, restaurants, and events, including waiters, housekeeping, and kitchen staff.",
-      icon: <Utensils size={24} />,
-      imageUrl: "/images/services/hospitality.jpg",
-      skills: ["Housekeeping staff", "Food & beverage servers", "Kitchen helpers", "Front desk personnel", "Event staff"]
+      title: "Front Desk & Supervisors",
+      description: "Professional administrative staff for hotels, hospitality, and business centers including front desk, reception, and shift supervisors.",
+      icon: <Hotel size={24} />,
+      imageUrl: "/images/services/receptionist.jpg",
+      skills: [
+        "Front desk personnel", 
+        "Reception staff", 
+        "Shift supervisors"
+      ]
     },
     {
-      title: "Event Management",
-      description: "Setup crews, ushers, stewards, and temporary manpower for corporate and social events.",
+      title: "Event & Office Coordination",
+      description: "Experienced coordinators and admin staff for event planning, office management, and customer service.",
       icon: <Users size={24} />,
       imageUrl: "/images/services/events.jpg",
-      skills: ["Event coordinators", "Setup crews", "Ushers and stewards", "Audio-visual technicians", "Customer service staff"]
+      skills: [
+        "Event coordinators", 
+        "Office administrators", 
+        "Customer service staff"
+      ]
     },
     {
-      title: "Healthcare Support",
-      description: "Support staff for healthcare facilities, including orderlies, cleaners, and administrative personnel.",
+      title: "Healthcare Admin Support",
+      description: "Administrative and records management staff for healthcare facilities.",
       icon: <Stethoscope size={24} />,
       imageUrl: "/images/industries/healthcare.jpg",
-      skills: ["Administrative assistants", "Patient care assistants", "Medical records clerks", "Reception staff", "Support coordinators"]
+      skills: [
+        "Administrative assistants", 
+        "Medical records clerks", 
+        "Support coordinators"
+      ]
     },
     {
-      title: "Facility Management",
-      description: "Comprehensive administrative and management solutions for building operations and maintenance coordination.",
+      title: "Facility Management (Admin)",
+      description: "Administrative and management professionals for building operations and vendor coordination.",
       icon: <Warehouse size={24} />,
       imageUrl: "/images/industries/facility.jpg",
-      skills: ["Property administrators", "Maintenance coordinators", "Facility supervisors", "Vendor management", "Administrative support"]
+      skills: [
+        "Property administrators", 
+        "Maintenance coordinators", 
+        "Facility supervisors", 
+        "Vendor management", 
+        "Administrative support"
+      ]
     }
   ];
 

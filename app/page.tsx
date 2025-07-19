@@ -20,8 +20,6 @@ import ServiceCard from "../components/ServiceCard";
 import HeroBanner from "../components/HeroBanner";
 import SectionTitle from "../components/SectionTitle";
 import CallToAction from "../components/CallToAction";
-import Stats from "../components/Stats";
-import Testimonials from "../components/Testimonials";
 import FeaturedSection from "../components/FeaturedSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
@@ -31,13 +29,13 @@ export default function Home() {
       title: "Construction Labor",
       description: "Skilled and unskilled workers for site operations, masonry, carpentry, and more.",
       icon: <HardHat size={24} />,
-      imageUrl: "/images/services/construction.jpg",
+      imageUrl: "/images/services/construction-worker.jpg",
     },
     {
       title: "Hospitality Staff",
       description: "Waiters, housekeeping, receptionists, and kitchen helpers for hotels and restaurants.",
       icon: <Utensils size={24} />,
-      imageUrl: "/images/services/hospitality.jpg",
+      imageUrl: "/images/services/receptionist.jpg",
     },
     {
       title: "Cleaning Services",
@@ -68,11 +66,9 @@ export default function Home() {
             <span className="text-[#d4af62]">Manpower</span>
           </>
         }
-        backgroundImage="/images/home/hero.jpg" 
+        backgroundImage="/images/home/hero.jpg"
+        includeCarousel={true}
       />
-
-      {/* Mission Statement Section */}
-      <Stats />
 
       {/* Featured Section */}
       <FeaturedSection 
@@ -192,16 +188,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <Testimonials />
-
       {/* Call to Action */}
       <CallToAction 
         title="Ready to solve your manpower needs?"
         description="Contact us today to discuss how we can support your business with reliable workforce solutions."
         buttonText="Get in Touch"
         buttonLink="/contact"
-        backgroundImage="/images/home/stats-bg.jpg"
+        backgroundImage="/images/home/hero.jpg"
       />
 
       <Footer />

@@ -40,12 +40,6 @@
       "namedRegex": "^/contact(?:/)?$"
     },
     {
-      "page": "/favicon.ico",
-      "regex": "^/favicon\\.ico(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/favicon\\.ico(?:/)?$"
-    },
-    {
       "page": "/industries",
       "regex": "^/industries(?:/)?$",
       "routeKeys": {},

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const Testimonials = ({ backgroundImage = '/images/home/testimonial-bg.jpg' }) => {
+const Testimonials = ({ backgroundImage = '/images/home/hero.jpg' }) => {
   return (
     <div 
       className="relative py-20 md:py-28"

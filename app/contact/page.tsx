@@ -30,7 +30,7 @@ export default function Contact() {
       title: "Address",
       details: [
         "Sultan Business Centre",
-        "Al Wasl Building, Office 511",
+        "Office 511",
         "Oud Metha Road, Oud Metha",
         "Dubai, United Arab Emirates"
       ]
@@ -148,7 +148,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Visit our office in Dubai to discuss your manpower requirements in person. We&apos;re conveniently located at Sultan Business Centre, Al Wasl Building in Oud Metha.
+                Visit our office in Dubai to discuss your manpower requirements in person. We&apos;re conveniently located at Sultan Business Centre in Oud Metha.
               </motion.p>
               
               <motion.div 

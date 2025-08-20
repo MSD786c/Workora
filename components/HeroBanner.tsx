@@ -8,12 +8,20 @@ interface HeroBannerProps {
   backgroundImage: string;
   includeCarousel?: boolean;
   showSlogans?: boolean;
+  showMarquee?: boolean;
 }
 
-const slogans = [
-  "Manpower that Moves Nations",
-  "Precision People for Every Project", 
-  "Where Industry Meets Human Power"
+const logoImages = [
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_10_33_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_10_59_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_04_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_09_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_14_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_18_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_22_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_25_PM.png",
+  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_28_PM.png",
+  "/images/logos/WORKORA_PNG_LOGO.png"
 ];
 
 const HeroBanner = ({
@@ -21,6 +29,7 @@ const HeroBanner = ({
   backgroundImage,
   includeCarousel = false,
   showSlogans = true,
+  showMarquee = false,
 }: HeroBannerProps) => {
   return (
     <div 
@@ -84,29 +93,38 @@ const HeroBanner = ({
           </motion.div>
         )}
 
-        {/* Marquee Slogans - Under the quote */}
-        {showSlogans && (
+        {/* Marquee Logo Images - Under the quote */}
+        {showMarquee && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="w-full mt-8"
+            className="w-full mt-4"
           >
             <Marquee
               gradient={false}
-              speed={40}
+              speed={50}
               direction="right"
-              pauseOnHover={true}
-              className="py-4"
+              pauseOnHover={false}
+              className="pt-6 pb-2"
             >
-              {slogans.map((slogan, idx) => (
-                <div key={idx} className="mx-12 whitespace-nowrap flex items-center">
-                  <span className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    {slogan}
-                  </span>
-                  <span className="text-lg md:text-xl lg:text-2xl font-bold text-[#d4af62] mx-6">
-                    ◆
-                  </span>
+              {logoImages.map((logoSrc, idx) => (
+                <div key={idx} className="mx-8 flex items-center">
+                  <div className="relative h-42 w-52 md:h-38 md:w-54 lg:h-42 lg:w-62 xl:h-64 xl:w-80 flex items-center justify-center">
+                    <img
+                      src={logoSrc}
+                      alt={`Workora logo ${idx + 1}`}
+                      className="max-h-full max-w-full object-contain filter brightness-110 hover:brightness-125 transition-all duration-300"
+                      style={{
+                        filter: 'brightness(1.1) contrast(1.1)'
+                      }}
+                    />
+                  </div>
+                  {idx < logoImages.length - 1 && (
+                    <div className="mx-6 text-[#d4af62]">
+                      <span className="text-2xl font-bold">◆</span>
+                    </div>
+                  )}
                 </div>
               ))}
             </Marquee>

@@ -68,6 +68,7 @@ export default function Home() {
         }
         backgroundImage="/images/home/hero.jpg"
         includeCarousel={true}
+        showMarquee={true}
       />
 
       {/* Featured Section */}

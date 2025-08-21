@@ -12,16 +12,16 @@ interface HeroBannerProps {
 }
 
 const logoImages = [
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_10_33_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_10_59_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_04_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_09_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_14_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_18_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_22_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_25_PM.png",
-  "/images/logos/ChatGPT_Image_Aug_20_2025_02_11_28_PM.png",
-  "/images/logos/WORKORA_PNG_LOGO.png"
+  "/images/logos/logo1.png",
+  "/images/logos/logo2.png",
+  "/images/logos/logo3.png",
+  "/images/logos/logo4.png",
+  "/images/logos/logo5.png",
+  "/images/logos/logo6.png",
+  "/images/logos/logo7.png",
+  "/images/logos/logo8.png",
+  "/images/logos/logo9.png",
+  "/images/logos/logo11.png"
 ];
 
 const HeroBanner = ({

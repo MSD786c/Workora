@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="mb-6">
             <Link href="/" className="hover:text-white transition-colors">
               <Image
-                src="/workora-logo.png"
+                src="/logo10.png"
                 alt="Workora Logo"
                 width={180}
                 height={60}

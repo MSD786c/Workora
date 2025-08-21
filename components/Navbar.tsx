@@ -2,27 +2,13 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -39,9 +25,7 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'
-      }`}
+      className="fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md py-0"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -80,9 +64,7 @@ const Navbar = () => {
               {link.hasDropdown ? (
                 <div className="relative">
                   <button
-                    className={`flex items-center text-sm font-medium transition-colors hover:text-[#d4af62] ${
-                      isScrolled ? 'text-black' : 'text-white'
-                    }`}
+                    className="flex items-center text-sm font-medium transition-colors hover:text-[#d4af62] text-black"
                   >
                     {link.name}
                     <ChevronDown size={16} className="ml-1" />
@@ -114,9 +96,7 @@ const Navbar = () => {
               ) : (
                 <Link 
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-[#d4af62] ${
-                    isScrolled ? 'text-black' : 'text-white'
-                  }`}
+                  className="text-sm font-medium transition-colors hover:text-[#d4af62] text-black"
                 >
                   {link.name}
                 </Link>
@@ -129,7 +109,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`p-2 rounded-md ${isScrolled ? 'text-black' : 'text-white'}`}
+            className="p-2 rounded-md text-black"
           >
             {isMobileMenuOpen ? (
               <X size={24} />

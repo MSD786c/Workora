@@ -46,7 +46,7 @@ const Footer = () => {
       >
         {/* Company Info */}
         <motion.div variants={itemVariants}>
-          <div className="mb-6">
+          <div className="mb-0">
             <Link href="/" className="hover:text-white transition-colors">
               <Image
                 src="/logo10.png"
@@ -58,7 +58,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className="text-gray-300 mb-6">
-            Excellence in every Hire.
+            "Excellence in every Hire."
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((social, index) => (

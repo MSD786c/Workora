@@ -31,7 +31,7 @@ export default function Contact() {
       details: [
         "Sultan Business Centre",
         "Office 511",
-        "Oud Metha Road, Oud Metha",
+        "Oud Metha",
         "Dubai, United Arab Emirates"
       ]
     },

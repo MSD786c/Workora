@@ -58,7 +58,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className="text-gray-300 mb-6">
-            Manpower Supply L.L.C. S.O.C – Providing skilled & unskilled labor across the UAE.
+            Excellence in every Hire.
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((social, index) => (
@@ -111,7 +111,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start">
               <MapPin size={18} className="text-[#d4af62] mt-1 mr-3 flex-shrink-0" />
-              <span className="text-gray-300">Sultan Business Centre, Al Wasl Building, Oud Metha, Dubai, UAE</span>
+              <span className="text-gray-300">Sultan Business Centre, Oud Metha, Dubai, UAE</span>
             </li>
           </ul>
         </motion.div>

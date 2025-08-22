@@ -71,26 +71,13 @@ export default function Services() {
       skills: ["Electricians", "HVAC technicians", "Plumbers", "Fire system technicians", "BMS operators", "Ductman", "Insulator"]
     },
     {
-      title: "Cleaning Services",
-      description: "Commercial, residential, and industrial cleaning manpower for all types of facilities.",
-      icon: <Sparkles size={24} />,
-      imageUrl: "/images/services/cleaning.jpg",
-      skills: ["Commercial cleaning", "Residential cleaning", "Industrial cleaning", "Specialized sanitization", "Maintenance cleaning"]
-    },
-    {
       title: "Logistics & Warehouse",
       description: "Skilled personnel for warehouse operations, inventory management, and transportation services.",
       icon: <Truck size={24} />,
       imageUrl: "/images/services/logistics.jpg",
       skills: ["Warehouse workers", "Forklift operators", "Packers and loaders", "Inventory clerks", "Delivery drivers"]
     },
-    {
-      title: "Security Personnel",
-      description: "Trained guards for residential, commercial, and event security with proper certifications.",
-      icon: <Shield size={24} />,
-      imageUrl: "/images/services/security.jpg",
-      skills: ["Building security", "Event security", "Patrol services", "Access control", "Emergency response"]
-    },
+  
     {
       title: "Manufacturing & Engineering",
       description: "Skilled workers for production lines, quality control, and engineering support across manufacturing sectors.",
@@ -110,7 +97,7 @@ export default function Services() {
       description: "Professional drivers for last-mile delivery, logistics, and courier services across all vehicle types.",
       icon: <Truck size={24} />,
       imageUrl: "/images/services/delivery-driver.jpg",
-      skills: ["Van and truck drivers", "Motorcycle couriers", "Bicycle delivery riders", "Package handlers", "Route optimization specialists", "Customer service representatives"]
+      skills: ["Van and truck drivers", "Motorcycle couriers", "Bicycle delivery riders"]
     },
     // --- MOVED FROM WHITE COLLAR ---
     {
@@ -139,7 +126,7 @@ export default function Services() {
     },
     {
       title: "Facility & Maintenance Staff",
-      description: "Technicians and support workers for property upkeep, cleaning, and maintenance operations.",
+      description: "Technicians and support workers across various industries for property upkeep, cleaning, and maintenance operations.",
       icon: <Warehouse size={24} />,
       imageUrl: "/images/industries/facility.jpg",
       skills: [
@@ -202,32 +189,30 @@ export default function Services() {
 
   const payrollServices = [
     {
-      title: "Complete Payroll Processing",
-      description: "End-to-end payroll management including salary calculations, statutory deductions, and timely disbursements through secure payment systems.",
+      title: "Visa Sponsorship & Processing",
+      description: "Complete visa sponsorship under our company when you face quota restrictions. Transparent cost structure.",
       icon: <Calculator size={24} />,
-      imageUrl: "/images/services/payroll.jpg",
-      features: ["Monthly salary processing", "Overtime & allowance calculations", "Statutory deduction management", "WPS salary transfers", "End of service benefit calculations", "Multi-currency payroll support"]
+      features: [
+        "Elimination of quota-related hiring barriers",
+        "Complete visa sponsorship under our company",
+        "Transparent cost structure",
+        "Fast processing times"
+      ]
     },
     {
-      title: "Employee Administration",
-      description: "Comprehensive employee lifecycle management from onboarding to exit, handling all documentation and government compliance requirements.",
-      icon: <FileText size={24} />,
-      imageUrl: "/images/services/payroll.jpg",
-      features: ["Employee onboarding & documentation", "Visa & work permit processing", "Emirates ID coordination", "Medical insurance enrollment", "Bank account opening assistance", "Employee record maintenance"]
-    },
-    {
-      title: "Attendance & Time Management",
-      description: "Advanced time tracking and attendance management systems with automated timesheet processing and verification.",
-      icon: <TrendingUp size={24} />,
-      imageUrl: "/images/services/payroll.jpg",
-      features: ["Biometric attendance systems", "Timesheet collection & verification", "Leave management integration", "Overtime tracking", "Shift schedule management", "Real-time attendance reporting"]
-    },
-    {
-      title: "Regulatory Compliance",
-      description: "Ensuring complete adherence to UAE labor laws, MOHRE regulations, and government requirements with expert guidance.",
+      title: "Bank Account Opening & Salary Transfer via WPS",
+      description: "We assist employees with opening bank accounts to ensure smooth salary transfers, with WPS-compliant salary transfers ensuring timely and accurate payments to all employees.",
       icon: <Briefcase size={24} />,
-      imageUrl: "/images/services/payroll.jpg",
-      features: ["UAE labor law compliance", "MOHRE liaison services", "Government audit support", "Legal documentation", "Policy implementation", "Regulatory updates management"]
+      features: [
+        "Bank account setup assistance",
+        "Documentation support",
+        "Multiple bank partnerships",
+        "Quick approval process",
+        "WPS-compliant salary transfers",
+        "Pay slip distribution",
+        "End-of-service benefits management",
+        "Full regulatory compliance"
+      ]
     }
   ];
 
@@ -415,30 +400,35 @@ export default function Services() {
       <section id="payroll-management" className="py-20 px-4 bg-[#f7f7f7]">
         <div className="max-w-7xl mx-auto">
           <SectionTitle 
-            title="Payroll Management Solutions" 
-            subtitle="Comprehensive payroll and HR services that let you focus on what matters most - growing your business."
+            title="Payroll & Visa Sponsorship" 
+            subtitle="Seamless payroll solutions and visa sponsorship that eliminate quota barriers and compliance headaches."
           />
 
-          {/* Payroll Description */}
+          {/* Description */}
           <motion.div 
-            className="max-w-3xl mx-auto mb-16 text-center"
+            className="max-w-4xl mx-auto mb-16 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-              <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                Payroll is the backbone of every organization. With ever-changing regulations and complex compliance requirements, managing payroll in-house can be overwhelming and costly.
+            <div className="bg-white p-10 rounded-xl shadow-lg border border-gray-100">
+              <p className="text-gray-700 text-xl leading-relaxed mb-6">
+                Payroll is one of the most critical aspects of any organization, yet it often comes with significant administrative and compliance challenges. In the UAE, these challenges become even greater when companies face staff quota restrictions.
               </p>
-              <p className="text-[#d4af62] font-semibold text-lg">
-                Workora simplifies your payroll operations while ensuring 100% compliance, allowing your team to focus on strategic growth.
+              <div className="w-16 h-1 bg-[#d4af62] mx-auto mb-6"></div>
+              <p className="text-[#d4af62] font-bold text-2xl mb-6">
+                When this happens, Workora provides a seamless solution.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                If your company doesn't have the quota to hire staff under your own sponsorship, we take employees under our visa. The entire process is managed and processed through us, ensuring transparency, compliance, and efficiency.
               </p>
             </div>
           </motion.div>
 
+          {/* Services Grid */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -447,34 +437,34 @@ export default function Services() {
             {payrollServices.map((service, index) => (
               <motion.div 
                 key={index}
-                className="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-[#d4af62]/30"
+                className="bg-white shadow-lg rounded-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:border-[#d4af62]/40 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
                   duration: 0.5,
-                  delay: index * 0.1,
+                  delay: index * 0.15,
                   ease: "easeOut"
                 }}
                 viewport={{ once: true }}
                 whileHover={{ 
-                  y: -5,
-                  transition: { duration: 0.2 }
+                  y: -8,
+                  transition: { duration: 0.3 }
                 }}
               >
-                <div className="px-7 py-6">
-                  <div className="flex items-center mb-4">
-                    <div className="text-[#d4af62] mr-3 bg-[#d4af62]/10 p-2 rounded-lg">{service.icon}</div>
-                    <h3 className="text-lg font-bold text-[#d4af62]">{service.title}</h3>
+                <div className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="text-[#d4af62] mr-4 bg-[#d4af62]/15 p-3 rounded-xl group-hover:bg-[#d4af62]/25 transition-colors duration-300">{service.icon}</div>
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-[#d4af62] transition-colors duration-300">{service.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+                  <p className="text-gray-600 mb-8 text-base leading-relaxed">{service.description}</p>
                   {service.features && (
-                    <div className="space-y-3">
-                      <h4 className="text-sm font-semibold text-gray-800 border-b border-gray-200 pb-2">Key Features</h4>
-                      <ul className="space-y-2">
+                    <div className="space-y-4">
+                      <div className="w-12 h-0.5 bg-[#d4af62]/30 group-hover:bg-[#d4af62] transition-colors duration-300"></div>
+                      <ul className="space-y-3">
                         {service.features.map((feature, i) => (
-                          <li key={i} className="flex items-start text-xs text-gray-600">
-                            <CheckCircle className="text-[#d4af62] mt-0.5 mr-2 flex-shrink-0" size={12} />
-                            <span>{feature}</span>
+                          <li key={i} className="flex items-start text-sm text-gray-700">
+                            <CheckCircle className="text-[#d4af62] mt-0.5 mr-3 flex-shrink-0" size={16} />
+                            <span className="leading-relaxed">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -485,55 +475,72 @@ export default function Services() {
             ))}
           </motion.div>
 
-          {/* Payroll Benefits Section */}
+          {/* Benefits Section */}
           <motion.div 
-            className="mt-16"
+            className="bg-gradient-to-br from-[#d4af62]/8 via-[#d4af62]/5 to-transparent p-12 rounded-2xl border border-[#d4af62]/20"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-[#d4af62]/5 to-[#d4af62]/10 p-8 rounded-xl border border-[#d4af62]/20">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-[#d4af62] mb-3">Why Choose Workora Payroll Management Solutions?</h3>
-                <p className="text-gray-700 max-w-2xl mx-auto">
-                  Join hundreds of businesses who trust us with their payroll operations and focus on what they do best.
-                </p>
-              </div>
+            <div className="text-center mb-12">
+              <div className="w-20 h-1 bg-[#d4af62] mx-auto mb-6"></div>
+              <h3 className="text-3xl font-bold text-gray-800 mb-4">
+                Why Choose <span className="text-[#d4af62]">Workora</span>?
+              </h3>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                By outsourcing payroll and visa sponsorship to Workora, companies can streamline compliance with UAE labor laws, reduce administrative burdens, and ensure employees are paid accurately and on time.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div 
+                className="text-center group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white p-6 rounded-xl shadow-md mb-4 group-hover:shadow-lg transition-shadow duration-300">
+                  <Shield className="text-[#d4af62] mx-auto mb-4" size={40} />
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Transparent Costs</h4>
+                  <p className="text-gray-600">No hidden charges, clear fee structure with complete transparency</p>
+                </div>
+              </motion.div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
-                    <DollarSign className="text-[#d4af62] mx-auto mb-2" size={32} />
-                    <h4 className="font-semibold text-gray-800">Cost Effective</h4>
-                  </div>
-                  <p className="text-sm text-gray-600">Save up to 60% on payroll costs</p>
+              <motion.div 
+                className="text-center group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white p-6 rounded-xl shadow-md mb-4 group-hover:shadow-lg transition-shadow duration-300">
+                  <CheckCircle className="text-[#d4af62] mx-auto mb-4" size={40} />
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">WPS Compliant</h4>
+                  <p className="text-gray-600">Secure salary transfers via WPS with full regulatory compliance</p>
                 </div>
-                
-                <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
-                    <Shield className="text-[#d4af62] mx-auto mb-2" size={32} />
-                    <h4 className="font-semibold text-gray-800">100% Secure</h4>
+              </motion.div>
+              
+              <motion.div 
+                className="text-center group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white p-6 rounded-xl shadow-md mb-3 group-hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-16 h-16 mx-auto mb-0 flex items-center justify-center">
+                    <img 
+                      src="/images/aed-logo.png" 
+                      alt="AED Currency" 
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <p className="text-sm text-gray-600">Bank-level security & encryption</p>
+                  <h4 className="font-bold text-lg text-gray-800 mb-2">Confidential & Secure</h4>
+                  <p className="text-gray-600">Complete payroll data protection with bank-level security</p>
                 </div>
-                
-                <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
-                    <CheckCircle className="text-[#d4af62] mx-auto mb-2" size={32} />
-                    <h4 className="font-semibold text-gray-800">Fully Compliant</h4>
-                  </div>
-                  <p className="text-sm text-gray-600">UAE labor law & MOHRE certified</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg shadow-sm mb-3">
-                    <TrendingUp className="text-[#d4af62] mx-auto mb-2" size={32} />
-                    <h4 className="font-semibold text-gray-800">Expert Support</h4>
-                  </div>
-                  <p className="text-sm text-gray-600">Dedicated account managers</p>
-                </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

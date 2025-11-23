@@ -84,6 +84,6 @@ export const metadata: Metadata = {
     canonical: 'https://www.workora.ae',
   },
   verification: {
-    google: 'eJpxnDIimwsCn28-aIMYrlMpDRxvkGlDfZTmgfTpaR8',
+    google: 'extg3kXcjK3R-jfmKGy-CqR-kzMKMEeq_fCgSuJYPEo',
   },
 }; 

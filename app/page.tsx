@@ -23,6 +23,7 @@ import CallToAction from "../components/CallToAction";
 import FeaturedSection from "../components/FeaturedSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
+
 export default function Home() {
   const previewServices = [
     {

@@ -1,9 +1,10 @@
 {
-  "/api/contact/route": "/api/contact",
   "/_not-found/page": "/_not-found",
+  "/api/contact/route": "/api/contact",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/page": "/",
   "/about/page": "/about",
   "/contact/page": "/contact",
-  "/industries/page": "/industries",
-  "/services/page": "/services"
+  "/services/page": "/services",
+  "/industries/page": "/industries"
 }

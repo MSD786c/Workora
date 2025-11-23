@@ -57,7 +57,7 @@ export function getOrganizationSchema(): OrganizationSchema {
     '@type': 'Organization',
     name: 'Workora Manpower Supply L.L.C.',
     url: 'https://www.workora.ae',
-    logo: 'https://www.workora.ae/workora-logo.png',
+    logo: 'https://www.workora.ae/tablogo.png',
     description: 'Leading manpower supply company in UAE providing skilled and unskilled labor for construction, hospitality, logistics, and more.',
     address: {
       '@type': 'PostalAddress',
@@ -116,7 +116,7 @@ export function getLocalBusinessSchema() {
     '@type': 'LocalBusiness',
     '@id': 'https://www.workora.ae',
     name: 'Workora Manpower Supply L.L.C.',
-    image: 'https://www.workora.ae/workora-logo.png',
+    image: 'https://www.workora.ae/tablogo.png',
     url: 'https://www.workora.ae',
     telephone: '+971-4-221-2833',
     email: 'info@workora.ae',
